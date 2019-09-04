@@ -3,6 +3,7 @@ import socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind((socket.gethostname(), 1234))  # Define end point for communication
 s.listen()
+print('Localhost server is running.')
 
 while True:
 	clientsocket, address = s.accept()
